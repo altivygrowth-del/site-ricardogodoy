@@ -40,31 +40,67 @@
     .fu{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
     .fu.in{opacity:1;transform:none}
 
-    /* ── NAV ── */
-    #nav{position:fixed;top:0;left:0;right:0;z-index:200;transition:background .35s,box-shadow .35s}
-    #nav.scrolled{background:rgba(11,24,38,.97);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--gold-bd)}
-   .nav-bar{
-    display:grid;
-    grid-template-columns: 220px 1fr 220px;
-    align-items:center;
-    gap:20px;
+   /* — NAV — */
+#nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:200;
+  transition:background .35s, box-shadow .35s;
+}
+
+#nav.scrolled{
+  background:rgba(11,24,38,.97);
+  backdrop-filter:blur(10px);
+  box-shadow:0 1px 0 var(--gold-bd);
+}
+
+.nav-bar{
+  height:90px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 32px;
 }
 
 .nav-logo{
-    justify-self:start;
+  flex:0 0 220px;
+}
+
+.nav-logo img{
+  width:170px;
+  height:auto;
+  display:block;
 }
 
 .nav-links{
-    justify-self:center;
-    display:flex;
-    gap:32px;
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:32px;
+  list-style:none;
 }
 
 .nav-cta{
-    justify-self:end;
+  flex:0 0 220px;
+  display:flex;
+  justify-content:flex-end;
 }
-    .nav-links a{font-family:var(--ff-b);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);transition:color .2s}
-    .nav-links a:hover{color:var(--gold)}
+
+.nav-links a{
+  font-family:var(--ff-b);
+  font-size:.76rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.7);
+  transition:color .2s;
+}
+
+.nav-links a:hover{
+  color:var(--gold);
+}
     .nav-btn{font-family:var(--ff-b);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;padding:.6rem 1.5rem;border:1px solid var(--gold);color:var(--gold);transition:background .2s,color .2s;white-space:nowrap}
     .nav-btn:hover{background:var(--gold);color:var(--navy)}
     .ham{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px}
