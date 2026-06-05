@@ -44,18 +44,25 @@
     #nav{position:fixed;top:0;left:0;right:0;z-index:200;transition:background .35s,box-shadow .35s}
     #nav.scrolled{background:rgba(11,24,38,.97);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--gold-bd)}
    .nav-bar{
-    height:90px;
-    display:flex;
+    display:grid;
+    grid-template-columns: 220px 1fr 220px;
     align-items:center;
-    justify-content:space-between;
+    gap:20px;
 }
 
-.nav-logo img{
-    width:190px;
-    height:auto;
-    display:block;
+.nav-logo{
+    justify-self:start;
 }
-    .nav-links{display:flex;gap:2rem;list-style:none}
+
+.nav-links{
+    justify-self:center;
+    display:flex;
+    gap:32px;
+}
+
+.nav-cta{
+    justify-self:end;
+}
     .nav-links a{font-family:var(--ff-b);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);transition:color .2s}
     .nav-links a:hover{color:var(--gold)}
     .nav-btn{font-family:var(--ff-b);font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;padding:.6rem 1.5rem;border:1px solid var(--gold);color:var(--gold);transition:background .2s,color .2s;white-space:nowrap}
